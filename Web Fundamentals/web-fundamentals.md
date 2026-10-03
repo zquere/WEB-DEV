@@ -3411,33 +3411,6 @@ You don't need to memorize every networking detail before moving on, but you sho
 
 ---
 
-## ✅ Chapter Completion Checklist
-
-- [ ] I understand Internet vs Web
-- [ ] I understand client and server
-- [ ] I understand what a browser does
-- [ ] I understand what a web server does
-- [ ] I understand domains
-- [ ] I understand DNS
-- [ ] I understand IP addresses
-- [ ] I understand URLs
-- [ ] I understand HTTP
-- [ ] I understand HTTPS
-- [ ] I understand HTTP methods
-- [ ] I understand HTTP status codes
-- [ ] I understand requests and responses
-- [ ] I understand headers
-- [ ] I understand cookies
-- [ ] I understand sessions
-- [ ] I understand caching
-- [ ] I understand CDNs
-- [ ] I understand hosting
-- [ ] I understand basic TLS concepts
-- [ ] I inspected real requests in DevTools
-- [ ] I can explain what happens when a URL is opened
-
----
-
 > **The web is not magic.**
 >
 > It is a collection of systems communicating through well-defined rules.
