@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Practice CSS units, sizing, the box model, and responsive layouts.">
+  <title>CSS Units and Sizing Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">CSS Learning</a>
+      <span class="lesson-label">02 · Units &amp; Sizing</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">Learn by experimenting</p>
+      <h1>CSS Units <span>&amp; Sizing</span></h1>
+      <p class="intro">
+        Change values in <code>style.css</code>, resize your browser, and see how
+        flexible units help a layout adapt to the available space.
+      </p>
+    </section>
+
+    <section class="lesson-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / Relative units</p>
+          <h2>Same page, flexible sizes</h2>
+        </div>
+        <p>Compare fixed pixels with relative sizing.</p>
+      </div>
+
+      <div class="unit-grid">
+        <article class="info-card">
+          <span class="unit-tag">px</span>
+          <h3>Pixels</h3>
+          <p>A precise CSS length often useful for borders and small details.</p>
+          <div class="sample sample-px">320px max</div>
+        </article>
+        <article class="info-card">
+          <span class="unit-tag">rem</span>
+          <h3>Root-relative</h3>
+          <p>Based on the root font size. Useful for consistent type and spacing.</p>
+          <div class="sample sample-rem">2rem padding</div>
+        </article>
+        <article class="info-card">
+          <span class="unit-tag">%</span>
+          <h3>Percentages</h3>
+          <p>Often based on the containing block, making widths flexible.</p>
+          <div class="sample sample-percent">80% width</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">02 / The box model</p>
+          <h2>Content, padding, border</h2>
+        </div>
+        <p>Inspect the highlighted box and edit its dimensions.</p>
+      </div>
+
+      <div class="box-model-demo">
+        <div class="demo-box">
+          <strong>Content area</strong>
+          <span>Width: 100%</span>
+          <span>Padding surrounds content</span>
+          <span>Border surrounds padding</span>
+        </div>
+      </div>
+      <p class="note">
+        This demo uses <code>box-sizing: border-box</code>. Try changing it to
+        <code>content-box</code> in the stylesheet and compare the result.
+      </p>
+    </section>
+
+    <section class="lesson-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">03 / Responsive layout</p>
+          <h2>Cards that reflow</h2>
+        </div>
+        <p>Make the browser narrower to see columns wrap automatically.</p>
+      </div>
+
+      <div class="responsive-grid">
+        <article class="topic-card">
+          <span class="number">01</span>
+          <h3>Fluid container</h3>
+          <p>A percentage width gives the layout room to shrink.</p>
+          <code>width: min(92%, 1100px)</code>
+        </article>
+        <article class="topic-card">
+          <span class="number">02</span>
+          <h3>Flexible text</h3>
+          <p>Use a range so a heading scales but stays readable.</p>
+          <code>font-size: clamp(...)</code>
+        </article>
+        <article class="topic-card">
+          <span class="number">03</span>
+          <h3>Responsive images</h3>
+          <p>Keep images inside their containers and preserve proportions.</p>
+          <code>max-width: 100%</code>
+        </article>
+      </div>
+    </section>
+
+    <section class="lesson-section formula-panel">
+      <p class="eyebrow">Remember this</p>
+      <h2>Size the box, not just the content</h2>
+      <p>With <code>content-box</code>, padding and border are added outside the declared content width.</p>
+      <p class="formula">Outer width = content + padding + border + margin</p>
+      <p>With <code>border-box</code>, the declared width includes content, padding, and border. Margin remains outside.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>CSS Learning Repository</p>
+      <p>Practice · Resize · Inspect · Repeat</p>
+    </div>
+  </footer>
+</body>
+</html>
