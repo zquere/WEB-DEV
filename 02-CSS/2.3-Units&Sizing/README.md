@@ -6,7 +6,7 @@ A practical learning module for understanding CSS units, element sizing, the box
 
 ```text
 CSS/
-└── 02-units-and-sizing/
+└── 2.3-units-and-sizing/
     ├── README.md
     ├── index.html
     └── style.css
