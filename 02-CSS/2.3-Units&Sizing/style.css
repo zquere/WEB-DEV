@@ -1,0 +1,304 @@
+/* =========================================================
+   CSS Units and Sizing — Practice stylesheet
+   Try changing the values and resizing the browser.
+   ========================================================= */
+
+/* Predictable sizing: width includes padding and border. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Try changing this value to explore rem sizing. */
+  font-size: 16px;
+  --color-ink: #17212b;
+  --color-muted: #5b6875;
+  --color-brand: #275dad;
+  --color-brand-dark: #173d78;
+  --color-soft: #edf4ff;
+  --color-border: #dce4ee;
+  --color-surface: #ffffff;
+  --radius-card: 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: var(--color-ink);
+  background: #f6f8fb;
+}
+
+.container {
+  /* Flexible on small screens; capped on wide screens. */
+  width: min(92%, 1100px);
+  margin-inline: auto;
+}
+
+.site-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner,
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+.brand {
+  color: var(--color-ink);
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -0.03em;
+}
+
+.lesson-label,
+.eyebrow,
+.unit-tag,
+.number {
+  color: var(--color-brand);
+  font-size: 0.8rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero {
+  padding-block: clamp(3rem, 9vw, 7rem);
+  max-width: 70ch;
+}
+
+.hero h1 {
+  margin: 0.25rem 0 1rem;
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.06em;
+}
+
+.hero h1 span {
+  color: var(--color-brand);
+}
+
+.intro {
+  max-width: 62ch;
+  color: var(--color-muted);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+code {
+  padding: 0.15em 0.35em;
+  border-radius: 0.35rem;
+  background: #edf0f5;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+}
+
+.lesson-section {
+  margin-block: 0 clamp(3rem, 7vw, 5rem);
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading h2,
+.formula-panel h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.section-heading > p {
+  max-width: 34ch;
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+}
+
+.unit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 1rem;
+}
+
+.info-card,
+.topic-card {
+  min-width: 0;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: 0 0.4rem 1.5rem rgb(23 33 43 / 5%);
+}
+
+.unit-tag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background: var(--color-soft);
+  border-radius: 999px;
+}
+
+.info-card h3,
+.topic-card h3 {
+  margin: 0.75rem 0 0.4rem;
+}
+
+.info-card p,
+.topic-card p,
+.note {
+  color: var(--color-muted);
+}
+
+.sample {
+  display: grid;
+  place-items: center;
+  min-height: 4rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  color: var(--color-brand-dark);
+  background: var(--color-soft);
+  border: 1px dashed #91addb;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.sample-px {
+  width: min(100%, 320px);
+}
+
+.sample-rem {
+  padding: 2rem;
+}
+
+.sample-percent {
+  width: 80%;
+}
+
+/* The outer demo area makes the inner box easy to inspect. */
+.box-model-demo {
+  padding: clamp(1rem, 4vw, 2rem);
+  background: #e9edf4;
+  border: 1px dashed #9ba9ba;
+  border-radius: var(--radius-card);
+}
+
+.demo-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+  min-height: 10rem;
+  padding: 1.5rem;
+  border: 0.5rem solid var(--color-brand);
+  background: var(--color-surface);
+  border-radius: 0.75rem;
+  overflow-wrap: anywhere;
+}
+
+.demo-box strong {
+  font-size: 1.2rem;
+}
+
+.note {
+  font-size: 0.95rem;
+}
+
+.responsive-grid {
+  display: grid;
+  /* Columns automatically wrap when there isn't enough room. */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 1rem;
+}
+
+.number {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--color-soft);
+  letter-spacing: 0;
+}
+
+.topic-card code {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.formula-panel {
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  background: var(--color-brand-dark);
+  color: white;
+  border-radius: var(--radius-card);
+}
+
+.formula-panel .eyebrow {
+  color: #b9d3ff;
+}
+
+.formula-panel code {
+  color: var(--color-ink);
+}
+
+.formula-panel p:not(.eyebrow) {
+  max-width: 72ch;
+}
+
+.formula {
+  margin-block: 1.25rem;
+  padding: 1rem;
+  border-left: 0.25rem solid #b9d3ff;
+  background: rgb(255 255 255 / 10%);
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.footer-inner {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.footer-inner p {
+  margin: 0;
+}
+
+/* Layout changes based on available viewport width. */
+@media (max-width: 650px) {
+  .header-inner,
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero {
+    padding-block: 3rem;
+  }
+}
