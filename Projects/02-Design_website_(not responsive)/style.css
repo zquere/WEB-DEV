@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+:root {
+    --main_color: rgb(20, 185, 185);
+}
+
+/* ----------------doing nav stuff--------------------------- */
+nav {
+    width: 80%;
+    height: 80px;
+    border: 2px;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.logo_nav img {
+    height: 50px;
+    width: auto;
+}
+
+.option_ul {
+    display: flex;
+    justify-content: center;
+}
+
+.Option_nav {
+    margin: 0px 320px;
+}
+
+.option_li {
+    list-style: none;
+    margin: 0px 7px;
+    font-size: large;
+}
+
+.option_li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 5px;
+    border-radius: 15px;
+}
+
+.end_download_language_li>a,
+.end_download_language_li>p {
+    color: black;
+    text-decoration: none;
+    padding: 5px 5px;
+    border-radius: 15px;
+}
+
+.end_download_language_li {
+    list-style: none;
+    margin: 0px 7px;
+    font-size: large;
+}
+
+.end_download_language_ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.end_nav {
+    margin: 0px 0px;
+}
+
+.option_li>a:hover,
+.end_download_language_li>:first-child:hover {
+    border: 2px solid rgba(128, 128, 128, 0.855);
+    box-shadow: 2px 2px 2px gray;
+}
+
+/* ----------------------main-intor------------------------------------- */
+
+.main_intro {
+    width: 90%;
+    max-width: 1100px;
+    margin: 90px auto 0;
+    text-align: center;
+}
+
+.main_intro h1 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 400;
+    color: #222;
+
+}
+
+.main_intro h1 strong {
+    font-weight: 700;
+}
+
+.main_intro>.p {
+    border: 2px;
+    margin: 0px 68px;
+    font-size: large;
+    margin-top: 30px;
+    width: 85%;
+
+}
+
+.main_intro>.p2 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: auto;
+    font-size: large;
+    border: 2px;
+
+}
+
+.main_intro>a {
+    color: black;
+    text-decoration: none;
+    border: 2px solid;
+    display: block;
+    margin: 55px 300px;
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 10px;
+    background-color: rgb(20, 185, 185);
+    color: white;
+    font-weight: bolder;
+}
+
+.main_intro>a:hover {
+    border: 2px solid rgb(207, 212, 238);
+    box-shadow: 0px 0px 4px rgb(0, 182, 124);
+    text-shadow: 0px 0px 8px rgb(112, 112, 112);
+}
+
+/* --------version-topicc--------------------------- */
+
+.version {
+    border: 2px;
+    height: 100px;
+
+    width: 50%;
+    margin: 0px 460px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.version img {
+    height: 70px;
+    width: auto;
+}
+
+.version h3 {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.version p {
+    display: inline;
+    font-size: medium;
+    margin-top: 15px;
+    color: rgb(93, 92, 92);
+}
+
+
+/* ----------------------main-outro------------------------- */
+
+.main_outro {
+    border: 2px;
+    height: 500px;
+    width: 70%;
+    margin: 0px 276px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.card {
+    border: 2px solid #E8E8E8;
+    padding: 10px;
+    margin: 10px 39px;
+    height: 170px;
+    width: 25%;
+    border-radius: 20px;
+    background-color: #E8E8E8;
+}
+
+.card h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.main_ul {
+    display: inline;
+}
+
+.main_ul a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    border: 2px solid;
+    padding: 10px;
+    margin: 0px 14px;
+    margin-top: 50px;
+    background-color: var(--main_color);
+    border-radius: 5px;
+    color: white;
+
+}
+
+.main_ul a:hover {
+    border: 2px solid rgb(207, 212, 238);
+    box-shadow: 0px 0px 4px rgb(0, 182, 124);
+    text-shadow: 0px 0px 8px rgb(112, 112, 112);
+}
+
+.english {
+    margin-top: 20px;
+}
+
+.download-64 a {
+    background-color: #7abe7a;
+}
+
+.download-64 a:hover {
+    border: 2px solid rgb(207, 212, 238);
+    box-shadow: 0px 0px 4px #7abe7a;
+    text-shadow: 0px 0px 8px rgb(112, 112, 112);
+}
+
+
+.main_li,
+.main_li ul {
+    list-style: none;
+}
+
+
+
+.main_p {
+    text-align: center;
+    text-decoration: none;
+}
